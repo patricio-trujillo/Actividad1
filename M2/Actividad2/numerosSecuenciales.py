@@ -19,17 +19,18 @@ def main():
             print("Error: Debe ingresar un número entero del 1 al 9.")
 
     # Paso 2: Solicitar al usuario que ingrese números secuenciales saltándose el número ingresado y sus múltiplos
-    print(f"Ingrese números secuenciales comenzando desde 1, pero saltándose el número {num} y sus múltiplos:")
+    #print(f"Ingrese números secuenciales comenzando desde 1, pero saltándose el número {num} y sus múltiplos:")
     i = 1
     while True:
         try:
             if i % num == 0:
-                print(f"Se ha saltado el número {i} y sus múltiplos.")
+                #print(f"Se ha saltado el número {i} y sus múltiplos.")
                 i += 1
                 continue
             user_input = int(input(f"Ingrese el número {i}: "))
             if user_input != i:
-                raise ValueError(f"Error: Debe ingresar el número {i}.")
+                # se envia un mensaje informando al usuario el numero que debe ingresar
+                raise ValueError(f"Error: Debe ingresar el número {i}.") 
             i += 1
         except ValueError as e:
             print(e)

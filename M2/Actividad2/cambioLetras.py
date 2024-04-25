@@ -1,3 +1,14 @@
+'''
+Elige dos palabras del mismo largo en las que dos letras iguales no coincidan en la misma posición. Por 
+ejemplo, si se eligen las palabras "morena" y "pelito", cualquier "m" que aparezca en una frase será 
+reemplazada por una "p", las letras "o" se reemplazan por "e", "r" por "l", "e" por "i", "n" por "t" y "a" por "o".
+
+Crea un programa que:
+    1. Permita al usuario elegir dos palabras que cumplan con las condiciones mencionadas anteriormente.
+    2. Solicite al usuario que ingrese una frase.
+    3. Reemplace las letras según la regla establecida a partir de las palabras elegidas.
+    4. Imprima la nueva frase con las letras reemplazadas.
+'''
 def reemplazar_letras(palabra1, palabra2, frase):
     # Crear un diccionario de reemplazo con las letras de palabra1 como clave y las letras de palabra2 como valor
     reemplazo = dict(zip(palabra1, palabra2))

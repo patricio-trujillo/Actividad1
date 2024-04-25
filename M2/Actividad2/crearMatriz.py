@@ -5,7 +5,7 @@ Debes crear un programa que dibuje una matriz, según las siguientes consideraci
     3. Dibujar las filas y columnas solicitadas
 '''
 # Definición de la función para imprimir el formato de la matriz
-def generaMatrix(filas, columnas):
+def generaMatriz(filas, columnas):
     # Imprimir la primera línea superior de la matriz
     print("+", end="")              # Imprimir el borde izquierdo de la primera celda
     for _ in range(columnas):       # Repetir según el número de columnas
@@ -33,7 +33,7 @@ def main():
     # Mostrar el formato de la matriz
     print("\nEl formato de la matriz es:")
     # Llamar a la función para imprimir el formato de la matriz
-    generaMatrix(filas, columnas)
+    generaMatriz(filas, columnas)
 
-#if __name__ == "__main__":
-main()
+if __name__ == "__main__":
+    main()
