@@ -35,5 +35,7 @@ def main():
     # Llamar a la función para imprimir el formato de la matriz
     generaMatriz(filas, columnas)
 
+
+#Verifica si el modulo actual esta siendo ejecutado por mi mismo o importado en otro modulo
 if __name__ == "__main__":
     main()

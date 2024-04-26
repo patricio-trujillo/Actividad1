@@ -25,6 +25,7 @@ def es_bisiesto(anio):
 def calcular_anios_bisiestos(nacimiento, muerte):
     # Si la persona sigue viva, el año de muerte será 0
     if muerte == 0:
+        #se utiliza para obtener el año actual como un entero
         muerte = datetime.datetime.now().year
     
     # Calcular la cantidad de años bisiestos entre el año de nacimiento y el año de muerte
@@ -38,6 +39,7 @@ def main():
     # Paso 2: Pedir al usuario el año de muerte o establecerlo como el año actual si sigue viva
     muerte = int(input("Ingrese el año de muerte de la persona (o 0 si está viva): "))
     if muerte == 0:
+        #se utiliza para obtener el año actual como un entero
         muerte = datetime.datetime.now().year
     
     # Paso 3: Calcular la cantidad de años bisiestos que la persona ha vivido
@@ -46,5 +48,6 @@ def main():
     # Paso 4: Mostrar la cantidad de años bisiestos calculados
     print(f"La persona ha vivido {anios_bisiestos} años bisiestos.")
 
+#Verifica si el modulo actual esta siendo ejecutado por mi mismo o importado en otro modulo
 if __name__ == "__main__":
     main()

@@ -17,18 +17,20 @@ def reemplazar_letras(palabra1, palabra2, frase):
     nueva_frase = ""
     for letra in frase:
         if letra.lower() in reemplazo:
-            # Mantener el caso original de la letra
-            if letra.isupper():
-                nueva_frase += reemplazo[letra.lower()].upper()
+            # Mantener el caso original de la letra en mayusculas
+            if letra.isupper(): #esta funcion retorna true si la letra original es mayuscula
+                #reemplazo[letra.lower()].upper() es la letra que se va a reemplazar a mayuscula original
+                nueva_frase += reemplazo[letra.lower()].upper() 
             else:
-                nueva_frase += reemplazo[letra.lower()]
+                #reemplazo[letra.lower()] es la letra que se va a reemplazar de acuerdo al valor original minuscula
+                nueva_frase += reemplazo[letra.lower()] 
         else:
             nueva_frase += letra
     
     return nueva_frase
 
 def main():
-    # Paso 1: Permitir al usuario elegir dos palabras
+    # Paso 1: Permitir al usuario elegir dos palabras y las convierte a minuscular con la funcion lower
     palabra1 = input("Ingrese la primera palabra: ").strip().lower()
     palabra2 = input("Ingrese la segunda palabra: ").strip().lower()
     
